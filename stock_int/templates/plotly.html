@@ -1,0 +1,56 @@
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+    <h1>Results for Symbol {{ symbol }}</h1>
+
+    <iframe
+
+    width=100% height="650" frameborder="0" seamless="seamless" scrolling="no"
+
+    src="{{ plot }}.embed?width=100%&height=650">
+
+    </iframe>
+    {{ table | safe }}
+    
+    <br><br>
+        {% if symbol == 'AAPL' %}
+         <div>
+             <img 
+                src = '../static/img016.jpg' 
+                style="width: 500px; height: 650px;"/>
+              <p>3 $ is at risk</p>
+         </div>
+
+        {% elif symbol == 'MSFT' %}
+            <div>
+                <img 
+                src = '../static/MSFT.jpeg' 
+                style="width: 1000px; height: 650px;"/>
+            </div>
+        {% elif symbol == 'YHOO' %}
+            <div>
+                <img 
+                src = '../static/img016.jpg' 
+                style="width: 500px; height: 650px;"/>
+            </div>
+
+        {% elif symbol == 'FB' %}
+            <div>
+                <img 
+                src = '../static/img016.jpg' 
+                style="width: 500px; height: 650px;"/>
+            </div>
+        {% else %}
+        <div>
+           OUR METHOD IS STILL LEARNING 
+        </div>
+        {% endif %}
+    <br><br>
+
+    
+
+
+{% endblock %}

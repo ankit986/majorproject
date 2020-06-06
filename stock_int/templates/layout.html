@@ -1,0 +1,31 @@
+
+<!doctype html>
+<title>Historical Stock Prices</title>
+
+<head>
+
+</head>
+
+<link rel=stylesheet type=text/css
+      href="{{ url_for('static', filename='style.css') }}">
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans'
+      rel='stylesheet' type='text/css'>
+
+<link rel="shortcut icon"
+      href="http://hilpisch.com/favicon.ico">
+
+<div class=page>
+
+  <div style="font-size: 70px; text-align: center; text-decoration: underline;">
+    
+    <p >STOCK MARKET RISK ANALYSIS</p>
+  </div>
+
+  <div class=metanav>
+    <a href="{{ url_for('main')}}">back to search</a>
+  </div>
+  {% block body %}
+
+  {% endblock %}
+</div>
