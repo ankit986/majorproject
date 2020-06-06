@@ -17,31 +17,46 @@
     
     <br><br>
         {% if symbol == 'AAPL' %}
-         <div>
+         <div style="text-align: center;">
+            <p>FINAL PRICE DISTRIBUTION AFTER 365 DAYS</p>
              <img 
-                src = '../static/img016.jpg' 
-                style="width: 500px; height: 650px;"/>
-              <p>3 $ is at risk</p>
+                src = '../static/AAPL.jpeg' 
+                style="width: 700px; height: 400px;"/>
+                <p>This basically means for every initial AAPL stock you purchase you're putting about $5.86 at risk 99% of the time from our Monte Carlo Simulation</p>
+
          </div>
 
         {% elif symbol == 'MSFT' %}
-            <div>
+            <div style="text-align: center;">
+                <p>FINAL PRICE DISTRIBUTION AFTER 365 DAYS</p>
+
                 <img 
                 src = '../static/MSFT.jpeg' 
-                style="width: 1000px; height: 650px;"/>
+                style="width: 700px; height: 400px;"/>
+                <p>This basically means for every initial AMZN stock you purchase you're putting about $38.56 at risk 99% of the time from our Monte Carlo Simulation</p>
+
             </div>
-        {% elif symbol == 'YHOO' %}
-            <div>
+        {% elif symbol == 'GOOGL' %}
+        <div style="text-align: center;">
+            <p>FINAL PRICE DISTRIBUTION AFTER 365 DAYS</p>
+
                 <img 
-                src = '../static/img016.jpg' 
-                style="width: 500px; height: 650px;"/>
+                src = '../static/GOOGL.jpeg' 
+                style="width: 700px; height: 400px;"/>
+            <p>This basically means for every initial GOOGL stock you purchase you're putting about $39.50 at risk 99% of the time from our Monte Carlo Simulation</p>
+
             </div>
 
-        {% elif symbol == 'FB' %}
-            <div>
+        {% elif symbol == 'AMZN' %}
+        <div style="text-align: center;">
+            <p>FINAL PRICE DISTRIBUTION AFTER 365 DAYS</p>
+
                 <img 
-                src = '../static/img016.jpg' 
-                style="width: 500px; height: 650px;"/>
+                src = '../static/AMZN.jpeg' 
+                style="width: 700px; height: 400px;"/>
+
+            <p>This basically means for every initial AMZN stock you purchase you're putting about $38.56 at risk 99% of the time from our Monte Carlo Simulation</p>
+
             </div>
         {% else %}
         <div>

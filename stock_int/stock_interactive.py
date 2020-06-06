@@ -25,9 +25,9 @@ def main():
 @app.route("/symbol/<symbol>+<trend1>+<trend2>")
 def results(symbol, trend1, trend2):
     data = web.DataReader(symbol, data_source='yahoo')
-    data['Trend 1'] = data['Adj Close'].rolling(int(trend1)).mean()
-    data['Trend 2'] = data['Adj Close'].rolling(int(trend2)).mean()
-    url = data[['Adj Close', 'Trend 1', 'Trend 2']].iplot(asUrl=True)
+    data['Moving Average 1'] = data['Adj Close'].rolling(int(trend1)).mean()
+    data['Moving Average 2'] = data['Adj Close'].rolling(int(trend2)).mean()
+    url = data[['Adj Close', 'Moving Average 1', 'Moving Average 2']].iplot(asUrl=True)
     table = data.tail().to_html()
     return render_template('plotly.html', symbol=symbol,
                            plot=url, table=table)
